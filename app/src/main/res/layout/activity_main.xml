@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:background="@color/BiruTema"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="CRUD Android"
+            android:textColor="@android:color/white"
+            android:textSize="12pt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textnama"/>
+
+        <TextView
+            android:id="@+id/subHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Pemrograman Mobile D"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/header"/>
+
+        <View
+            android:id="@+id/container_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/formtambah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textnim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/subHeader"
+            app:layout_constraintTop_toTopOf="@id/container_white"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            >
+
+            <EditText
+                android:id="@+id/editTextNim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan NIM"
+                android:backgroundTint="#FFCECECE"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="number"
+                android:textColorHint="#FFCECECE"
+                android:focusable="true"
+                android:drawableStart="@drawable/ic_id"
+                android:drawablePadding="5dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/subHeader"
+            app:layout_constraintTop_toBottomOf="@id/textnim"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            >
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Nama"
+                android:backgroundTint="#FFCECECE"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="textPersonName"
+                android:textColorHint="#FFCECECE"
+                android:focusable="true"
+                android:drawableStart="@drawable/ic_nama"
+                android:drawablePadding="5dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textjurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/subHeader"
+            app:layout_constraintTop_toBottomOf="@id/textnama"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            >
+
+            <EditText
+                android:id="@+id/editTextJurusan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Jurusan"
+                android:backgroundTint="#FFCECECE"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="textPersonName"
+                android:textColorHint="#FFCECECE"
+                android:focusable="true"
+                android:drawableStart="@drawable/ic_jurusan"
+                android:drawablePadding="5dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textjurusan"
+            app:layout_constraintTop_toBottomOf="@id/textjurusan"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            >
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Email"
+                android:backgroundTint="#FFCECECE"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserrat_light"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFCECECE"
+                android:focusable="true"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="30dp"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="7pt"
+            android:text="Tambah Mahasiswa"
+            app:layout_constraintTop_toBottomOf="@id/textemail"
+            app:layout_constraintStart_toStartOf="@id/textemail"
+            app:layout_constraintEnd_toEndOf="@id/textemail"
+            android:background="@drawable/btn_tombol"
+            android:fontFamily="@font/montserrat_bold"
+            />
+
+        <Button
+            android:id="@+id/buttonView"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="10dp"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="7pt"
+            android:text="Daftar Mahasiswa"
+            app:layout_constraintTop_toBottomOf="@id/buttonAdd"
+            app:layout_constraintStart_toStartOf="@id/buttonAdd"
+            app:layout_constraintEnd_toEndOf="@id/buttonAdd"
+            android:background="@drawable/btn_tombol"
+            android:fontFamily="@font/montserrat_bold"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
